@@ -21,6 +21,7 @@ FakeInChina(假装在中国)
 程序会建立 2 个ipset 的表项，你可以在 start.sh 里面找到：
 
 tocn ：对于单个IP 的伪装
+
 rtocn ： 对于IP段的伪装
 
 在 start.sh 里面的独立IP设置是已知的无域名IP和无域名IP段，需要独立添加，所以在脚本里面处理了。对于有域名的，则利用 dnsmasq 的ipset 扩展，加入一个 r.tocn.conf 的配置文件，自动添加到 tocn 的ipset 表项里面。
