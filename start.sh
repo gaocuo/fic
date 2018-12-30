@@ -11,15 +11,17 @@ iptables -t nat -A PREROUTING -p tcp -m set --match-set tocn dst -j REDIRECT --t
 iptables -t nat -A OUTPUT -p tcp -m set --match-set tocn dst -j REDIRECT --to-port 1008
 
 while read line ; do ipset add tocn $line ;done <<-EOF
-120.92.96.181
 101.227.139.217
 101.227.169.200
+103.65.41.125
+103.65.41.126
+103.7.30.79
 103.7.30.89
 103.7.31.186
 106.11.186.4
-106.11.47.20
-106.11.47.19
 106.11.209.2
+106.11.47.19
+106.11.47.20
 111.13.127.46
 111.206.208.163
 111.206.208.164
@@ -45,6 +47,7 @@ while read line ; do ipset add tocn $line ;done <<-EOF
 115.182.63.93
 117.185.116.152
 118.244.244.124
+120.92.96.181
 122.72.82.31
 123.125.89.101
 123.125.89.102
@@ -56,6 +59,7 @@ while read line ; do ipset add tocn $line ;done <<-EOF
 123.126.99.39
 123.126.99.57
 123.59.122.104
+123.59.122.75
 123.59.122.75                
 123.59.122.76
 123.59.122.77
@@ -95,7 +99,6 @@ while read line ; do ipset add tocn $line ;done <<-EOF
 36.110.222.156
 59.37.96.220
 61.135.196.99
-103.7.30.79
 EOF
 
 logger -t "【fakeincn】" "国内IP规则设置完成"
